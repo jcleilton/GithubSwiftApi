@@ -8,6 +8,10 @@
 import Foundation
 
 public class GithubSwiftMockApi: GithubSwiftProtocol {
+    public init() {
+        
+    }
+    
     public func fetch(page: String, completion: @escaping (Result<GithubSwiftResponse, GithubSwiftError>) -> Void) {
         guard let pageNumber = Int(page), pageNumber <= 10 else {
             return completion(.failure(GithubSwiftError.noMorePages))

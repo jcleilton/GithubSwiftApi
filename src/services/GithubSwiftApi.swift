@@ -10,6 +10,10 @@ import Foundation
 fileprivate var totalPage: Int = 1
 
 public class GithubSwiftApi: GithubSwiftProtocol {
+    public init() {
+        
+    }
+    
     public func fetch(page: String, completion: @escaping (Result<GithubSwiftResponse, GithubSwiftError>) -> Void) {
         guard let pageNumber = Int(page), pageNumber <= totalPage else {
             return completion(.failure(GithubSwiftError.noMorePages))

@@ -11,4 +11,11 @@ public struct License: Codable {
     public let key, name, spdxID: String
     public let url: String
     public let nodeID: String
+    
+    enum CodingKeys: String, CodingKey {
+        case key, name
+        case spdxID = "spdx_id"
+        case url
+        case nodeID = "node_id"
+    }
 }

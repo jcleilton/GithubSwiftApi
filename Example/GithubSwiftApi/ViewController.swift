@@ -7,18 +7,68 @@
 //
 
 import UIKit
+import GithubSwiftApi
 
 class ViewController: UIViewController {
-
+    let tableView = UITableView()
+    let viewModel = ViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.configTableView()
+        self.viewModel.delegate = self
+        fetchData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func configTableView() {
+        self.view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
+    
+    func fetchData() {
+        self.viewModel.fetchData()
+    }
+}
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cellData = viewModel.getCellData(from: indexPath)
+        cell?.textLabel?.text = (cellData?.id ?? "-") + " / " + (cellData?.value ?? "-")
+        return cell ?? UITableViewCell()
+    }
+}
+
+extension ViewController: ViewModelDelegate {
+    func didLoad() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func fetchFailled(message: String) {
+        
+    }
+    
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
+    }
 }
 

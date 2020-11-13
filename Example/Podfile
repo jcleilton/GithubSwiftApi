@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GithubSwiftApi_Example' do
+  pod 'GithubSwiftApi', :path => '../'
+
+  target 'GithubSwiftApi_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

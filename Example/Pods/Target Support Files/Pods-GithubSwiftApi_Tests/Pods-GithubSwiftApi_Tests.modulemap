@@ -1,0 +1,6 @@
+framework module Pods_GithubSwiftApi_Tests {
+  umbrella header "Pods-GithubSwiftApi_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

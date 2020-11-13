@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B9EA06F3DE70212774897E7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0B9EA06F3DE70212774897E7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		24CFD42BDF804C5E04AB5413 /* Pods-GithubSwiftApi_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSwiftApi_Example.debug.xcconfig"; path = "Target Support Files/Pods-GithubSwiftApi_Example/Pods-GithubSwiftApi_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		276A2575F323407B00D977C7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		27B103D87CF0781AA6110D6B /* GithubSwiftApi.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GithubSwiftApi.podspec; path = ../GithubSwiftApi.podspec; sourceTree = "<group>"; };
+		276A2575F323407B00D977C7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		27B103D87CF0781AA6110D6B /* GithubSwiftApi.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GithubSwiftApi.podspec; path = ../GithubSwiftApi.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4696D85F7836E4D6AF8EAAF5 /* Pods-GithubSwiftApi_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSwiftApi_Example.release.xcconfig"; path = "Target Support Files/Pods-GithubSwiftApi_Example/Pods-GithubSwiftApi_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GithubSwiftApi_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubSwiftApi_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +77,6 @@
 				CF229892C8F7639693EF8672 /* Pods-GithubSwiftApi_Tests.debug.xcconfig */,
 				E31B0DAE1F6CD74BF61BCEC8 /* Pods-GithubSwiftApi_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

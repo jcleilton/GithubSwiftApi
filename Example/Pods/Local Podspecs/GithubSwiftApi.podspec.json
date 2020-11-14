@@ -1,22 +1,23 @@
 {
   "name": "GithubSwiftApi",
-  "version": "0.1.0",
-  "summary": "A short description of GithubSwiftApi.",
+  "version": "0.1.1",
+  "summary": "GithubSwiftApi is my way to show what I got.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/jcleilton@gmail.com/GithubSwiftApi",
+  "homepage": "https://github.com/jcleilton/GithubSwiftApi",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "jcleilton@gmail.com": "josefeitosa@brq.com"
+    "Cleilton": "jcleilton@gmail.com"
   },
   "source": {
-    "git": "https://github.com/jcleilton@gmail.com/GithubSwiftApi.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/jcleilton/GithubSwiftApi.git",
+    "tag": "0.1.1"
   },
+  "social_media_url": "https://www.linkedin.com/in/jcleilton",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "GithubSwiftApi/Classes/**/*"
+  "source_files": "src/**/*.swift"
 }

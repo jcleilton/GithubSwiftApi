@@ -1,5 +1,5 @@
 PODS:
-  - GithubSwiftApi (0.1.0)
+  - GithubSwiftApi (0.1.1)
 
 DEPENDENCIES:
   - GithubSwiftApi (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GithubSwiftApi: 9a2c275d21e13b4b5e36733b3ace9f16281158bb
+  GithubSwiftApi: 662867aeb72b809562ae772fb2e17b8db8553bc8
 
-PODFILE CHECKSUM: 04b0b65e6abeecdefba33c9065987f8958bbd0ed
+PODFILE CHECKSUM: ec5acf36593a79b81f7d630de05db873511968a3
 
 COCOAPODS: 1.9.3

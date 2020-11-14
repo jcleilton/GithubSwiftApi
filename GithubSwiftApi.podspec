@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GithubSwiftApi'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'GithubSwiftApi is my way to show what I got.'
 
 # This description is used to generate tags and improve search results.

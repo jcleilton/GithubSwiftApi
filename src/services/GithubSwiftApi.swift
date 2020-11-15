@@ -10,6 +10,8 @@ import Foundation
 fileprivate var totalPage: Int = 1
 
 public class GithubSwiftApi: GithubSwiftProtocol {
+    public var perPage: Int = 10
+    
     public init() {
         
     }
@@ -19,11 +21,10 @@ public class GithubSwiftApi: GithubSwiftProtocol {
             return completion(.failure(GithubSwiftError.noMorePages))
         }
         let apiCall = APICall(page: page)
-        apiCall.fetch { result in
+        apiCall.fetch { [perPage] result in
             switch result {
             case .success(let githubSwiftResponse):
-                totalPage = githubSwiftResponse.totalCount / 10
-                completion(.success(githubSwiftResponse))
+                totalPage = GithubSwiftApi.getTotalPage(value: githubSwiftResponse.totalCount, from: perPage)
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -38,5 +39,9 @@ public class GithubSwiftApi: GithubSwiftProtocol {
         } else {
             completion(.failure(.badURL))
         }
+    }
+    
+    public static func getTotalPage(value: Int, from perPage: Int) -> Int {
+        value.getTotalPage(from: perPage)
     }
 }

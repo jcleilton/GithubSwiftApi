@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		048140A7A1453EE9B36FDA6F858CA192 /* Pods-GithubSwiftApi_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F0987785FED52DADC1340B52A30910 /* Pods-GithubSwiftApi_Example-dummy.m */; };
 		0A9711AB2560CEEC00515689 /* ImageBase64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9711AA2560CEEC00515689 /* ImageBase64.swift */; };
+		0A9711B02561596300515689 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9711AF2561596300515689 /* Int+Extension.swift */; };
 		0DC2162B7F132B2F8135ACA577889482 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80145E0BB15ADD1F761A1E9915137C3 /* APICall.swift */; };
 		16C67D17ABB6D0281B44D30DCF330E76 /* GithubSwiftMockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3F2B81F7408BC9ACE16830ECE2C2C9 /* GithubSwiftMockApi.swift */; };
 		1F751170E02BDCF9397424406FDAE591 /* GithubSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351DBB48A8045B67C321B020389FEF5D /* GithubSwiftError.swift */; };
@@ -57,6 +58,7 @@
 		007345186480BC28DF6DFBAAC21E1F3D /* GithubSwiftProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GithubSwiftProtocol.swift; sourceTree = "<group>"; };
 		085060899C240969D7B55A469818BD44 /* Pods-GithubSwiftApi_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GithubSwiftApi_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0A9711AA2560CEEC00515689 /* ImageBase64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBase64.swift; sourceTree = "<group>"; };
+		0A9711AF2561596300515689 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		0D73B3ECD08E3B673867F4C5FA99B4DA /* Pods-GithubSwiftApi_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GithubSwiftApi_Tests-Info.plist"; sourceTree = "<group>"; };
 		1146E3F655D44AFD0A04B1F101587668 /* GithubSwiftApi-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GithubSwiftApi-Info.plist"; sourceTree = "<group>"; };
 		133E43046D7115E81585EDFD826786BC /* GithubSwiftApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GithubSwiftApi.release.xcconfig; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E80145E0BB15ADD1F761A1E9915137C3 /* APICall.swift */,
+				0A9711AF2561596300515689 /* Int+Extension.swift */,
 			);
 			name = shared;
 			path = src/shared;
@@ -466,6 +469,7 @@
 				87B2A5C36D5C7C0BBFB231D339D1EC75 /* GithubSwiftProtocol.swift in Sources */,
 				E0E20D482159F73498C52AD05EB9247D /* GithubSwiftResponse.swift in Sources */,
 				8004F2D48FFEBF1F7F54E65BBAF61911 /* Item.swift in Sources */,
+				0A9711B02561596300515689 /* Int+Extension.swift in Sources */,
 				7F9FBC6839429451A35A079FB9B7A86E /* Licence.swift in Sources */,
 				CED71F6BB441C98248F6D876BAD9238C /* Owner.swift in Sources */,
 			);

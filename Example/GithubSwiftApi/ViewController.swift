@@ -57,7 +57,7 @@ extension ViewController: ViewModelDelegate {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
-//        self.viewModel.getImage() // To test the api image download
+        self.viewModel.getImage() // To test the api image download
     }
     
     func fetchFailled(message: String) {

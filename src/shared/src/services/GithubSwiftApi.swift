@@ -25,6 +25,7 @@ public class GithubSwiftApi: GithubSwiftProtocol {
             switch result {
             case .success(let githubSwiftResponse):
                 totalPage = GithubSwiftApi.getTotalPage(value: githubSwiftResponse.totalCount, from: perPage)
+                completion(.success(githubSwiftResponse))
             case .failure(let error):
                 completion(.failure(error))
             }

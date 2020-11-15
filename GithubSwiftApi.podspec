@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GithubSwiftApi'
-  s.version          = ENV['LIB_VERSION'] || '0.1.3.1'
+  s.version          = ENV['LIB_VERSION'] || '0.1.3.5'
   s.summary          = 'GithubSwiftApi is my way to show what I got.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = '**/*.swift'
+  s.source_files = 'src/**/*.swift'
   
   # s.resource_bundles = {
   #   'GithubSwiftApi' => ['GithubSwiftApi/Assets/*.png']

@@ -135,7 +135,20 @@
 				0A9711AF2561596300515689 /* Int+Extension.swift */,
 			);
 			name = shared;
-			path = src/shared;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0A9711B425618C5300515689 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B256CAA7327320C582CC923924B2AF4E /* mock */,
+				277F5C1CF01089D0718202CB32878BE3 /* model */,
+				D766E47F50F711B867046911A77A390C /* protocols */,
+				BD7767E0DFC2F0235D67362D705613D6 /* services */,
+				0577D69BA50BF9A7B8D7081AFBD43E6A /* shared */,
+			);
+			name = src;
+			path = src/shared/src;
 			sourceTree = "<group>";
 		};
 		185430A2F5B98D1C10E976CBFB8CBAF3 /* Pods-GithubSwiftApi_Example */ = {
@@ -164,8 +177,7 @@
 				B17C4CF728767D7A3B5B2C520A7532AF /* Licence.swift */,
 				2E5D0D37FB8CABFEEAC91B37DEEBE8CF /* Owner.swift */,
 			);
-			name = model;
-			path = src/model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -207,19 +219,14 @@
 				2C3F2B81F7408BC9ACE16830ECE2C2C9 /* GithubSwiftMockApi.swift */,
 				0A9711AA2560CEEC00515689 /* ImageBase64.swift */,
 			);
-			name = mock;
-			path = src/mock;
+			path = mock;
 			sourceTree = "<group>";
 		};
 		B537A152ABC0482D5CD4FE92E454883B /* GithubSwiftApi */ = {
 			isa = PBXGroup;
 			children = (
-				B256CAA7327320C582CC923924B2AF4E /* mock */,
-				277F5C1CF01089D0718202CB32878BE3 /* model */,
+				0A9711B425618C5300515689 /* src */,
 				E9688BA99CAB175D72CE20A23027408F /* Pod */,
-				D766E47F50F711B867046911A77A390C /* protocols */,
-				BD7767E0DFC2F0235D67362D705613D6 /* services */,
-				0577D69BA50BF9A7B8D7081AFBD43E6A /* shared */,
 				6923D715FA331585AC7ECA2BB3E06DE0 /* Support Files */,
 			);
 			name = GithubSwiftApi;
@@ -240,8 +247,7 @@
 			children = (
 				AF863657573EB5F9292823E45934D9E9 /* GithubSwiftApi.swift */,
 			);
-			name = services;
-			path = src/services;
+			path = services;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -268,8 +274,7 @@
 			children = (
 				007345186480BC28DF6DFBAAC21E1F3D /* GithubSwiftProtocol.swift */,
 			);
-			name = protocols;
-			path = src/protocols;
+			path = protocols;
 			sourceTree = "<group>";
 		};
 		E9688BA99CAB175D72CE20A23027408F /* Pod */ = {

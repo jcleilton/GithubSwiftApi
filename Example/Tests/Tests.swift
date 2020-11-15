@@ -1,15 +1,7 @@
 import XCTest
-@testable import GithubSwiftApi
+import GithubSwiftApi
 
 class Tests: XCTestCase {
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
     func testApiGetTotalPageFromPerPageWithoutMod() {
         let quantityTotal = 1000
         let perPage = 10

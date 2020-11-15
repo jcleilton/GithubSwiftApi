@@ -12,12 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Deploy to Cocoapods
-      run: |
-        set -eo pipefail
-        export LIB_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
-        pod lib lint --allow-warnings
-        pod trunk push --allow-warnings
+    - name: Install Cocoapods
+      run: gem install cocoapods
 
+    - uses: michaelhenry/deploy-to-cocoapods-github-action@1.0.9
       env:
         COCOAPODS_TRUNK_TOKEN: ${{ secrets.POD_TOKEN }}

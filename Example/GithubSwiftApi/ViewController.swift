@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GithubSwiftApi
 
 class ViewController: UIViewController {
     let tableView = UITableView()
@@ -36,6 +35,7 @@ class ViewController: UIViewController {
     
     func fetchData() {
         self.viewModel.fetchData()
+//        self.viewModel.getImage() // To test the mock get image
     }
 }
 
@@ -54,9 +54,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController: ViewModelDelegate {
     func didLoad() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
+//        self.viewModel.getImage() // To test the api image download
     }
     
     func fetchFailled(message: String) {
@@ -69,6 +70,21 @@ extension ViewController: ViewModelDelegate {
     
     func hideLoading() {
         
+    }
+    
+    func didLoadImage(data: Data) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let image = UIImage(data: data)
+            let imageView = UIImageView(image: image)
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.contentMode = .scaleAspectFit
+            self.view.addSubview(imageView)
+            imageView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+            imageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+            imageView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+            imageView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        }
     }
 }
 

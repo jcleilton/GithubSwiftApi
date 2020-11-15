@@ -25,4 +25,12 @@ public class GithubSwiftMockApi: GithubSwiftProtocol {
             completion(.success(data))
         }
     }
+    
+    public func getImage(url: String, completion: @escaping (Result<Data, GithubSwiftError>) -> Void) {
+        if let data = Data(base64Encoded: ImageBase64.string) {
+            completion(.success(data))
+        } else {
+            completion(.failure(.noData))
+        }
+    }
 }

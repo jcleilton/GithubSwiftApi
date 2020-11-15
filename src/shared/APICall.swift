@@ -55,4 +55,18 @@ public class APICall {
         }
         task.resume()
     }
+    
+    static func downloadImage(from url: URL, completion: @escaping((Result<Data, GithubSwiftError>) -> Void)) {
+        URLCache.shared.removeAllCachedResponses()
+        let session = URLSession.shared
+        session.dataTask(with: url, completionHandler: { (data, response, error) in
+            guard let _ = error else{
+                guard let data = data else{
+                    return completion(.failure(.noData))
+                }
+                return completion(.success(data))
+            }
+            completion(.failure(.taskError))
+        }).resume()
+    }
 }

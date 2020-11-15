@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GithubSwiftApi'
-  s.version          = ENV['LIB_VERSION'] || '0.1.1'
+  s.version          = ENV['LIB_VERSION'] || '0.1.2'
   s.summary          = 'GithubSwiftApi is my way to show what I got.'
 
 # This description is used to generate tags and improve search results.

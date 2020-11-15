@@ -29,4 +29,14 @@ public class GithubSwiftApi: GithubSwiftProtocol {
             }
         }
     }
+    
+    public func getImage(url: String, completion: @escaping (Result<Data, GithubSwiftError>) -> Void) {
+        if let url = URL(string: url) {
+            APICall.downloadImage(from: url) { result in
+                completion(result)
+            }
+        } else {
+            completion(.failure(.badURL))
+        }
+    }
 }
